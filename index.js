@@ -16,10 +16,14 @@ app.get('/', (req,res)=>{
 })
 
 app.get('/webhook/',(req,res)=>{
+     console.log('WEBHOOK')
+     
      if (req.query['hub.verify_token']=== "genieclausetoken"){
           res.send(req.query['hub.challenge'])
      }
-     res.send("Wrong token...")
+     else {
+          res.send("Wrong token...")
+     }
 })
 
 // 
