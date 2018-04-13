@@ -5,10 +5,10 @@ app = express(),
 request = require('request'),
 bodyParser = require('body-parser')
 
-//app.set('port', (process.env.PORT || 5000))
+app.set('port', (process.env.PORT || 5000))
 
 app.use(bodyParser.urlencoded({extended:false}))
-app.use(bodyParser, bodyParser.json())
+app.use(bodyParser.json())
 
 app.get('/', (req,res)=>{
      res.send('chatbot here')
@@ -23,5 +23,5 @@ app.get('/webhook/',(req,res)=>{
 })
 
 // 
-//app.listen(app.get('port'),() => console.log(`listening on ${app.get('port')}`) )
-app.listen((process.env.PORT || 5000),   console.log(`listening on ${(process.env.PORT || 5000)}`) )
+app.listen(app.get('port'),() => console.log(`listening on ${app.get('port')}`) )
+//app.listen((process.env.PORT || 5000),   console.log(`listening on ${(process.env.PORT || 5000)}`) )

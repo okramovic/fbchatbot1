@@ -11,10 +11,9 @@
     "url": "git+https://github.com/okramovic/fbchatbot1.git"
   },
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "*",
     "express": "^4.16.3",
-    "request": "^2.85.0",
-    "require": "*"
+    "request": "^2.85.0"
   },
   "author": "marko bogdanovic",
   "license": "ISC",
